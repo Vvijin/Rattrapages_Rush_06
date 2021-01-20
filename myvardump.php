@@ -1,23 +1,30 @@
-<?php 
+<?php
 
-function my_vardump(){
+function my_vardump($values)
+{
 
-$values = array([1], true, 'ol', '10', 10, '9.3',10.93,[2]);
+    // $values = array([1], true, 'ol', '10', 10, '9.3',10.93,[2]);
 
-    foreach ($values as $value) {
-        if(is_string($value))
+    // foreach ($values as $value) {
+    if (is_string($values)) {
         echo ' string ';
-        
-        elseif(is_numeric($value))
+        echo $values;
+    } elseif (is_numeric($values)) {
         echo ' number';
-
-        elseif(is_array($value))
+        echo $values;
+    } elseif (is_array($values)) {
         echo ' tableau ';
-
-        else
-        echo ' false ';
+        print_r($values);
     }
+
+
+    // else{
+    //     echo ' false ';
+    //     echo $values;
+    // }
 
 }
 
-my_vardump($values);
+// }
+
+my_vardump('');
