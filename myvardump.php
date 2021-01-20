@@ -7,11 +7,13 @@ function my_vardump($values)
 
     // foreach ($values as $value) {
     if (is_string($values)) {
-        echo ' string ';
-        echo $values;
+        echo 'string('.strlen($values).') ';
+        echo '"'.$values.'"';
+
     } elseif (is_numeric($values)) {
-        echo ' number';
-        echo $values;
+        echo ' int';
+        echo '('.$values.')';
+        
     } elseif (is_array($values)) {
         echo ' tableau ';
         print_r($values);
@@ -27,4 +29,5 @@ function my_vardump($values)
 
 // }
 
-my_vardump('');
+my_vardump('wesh ');
+var_dump('wesh');
